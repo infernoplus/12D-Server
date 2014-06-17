@@ -43,7 +43,7 @@ public class NetworkCore {
 		engine = a;
 		timeOut = 5000;
 		online = false;
-		System.out.println("Network ready!");
+		Log.log("Network Ready!", "Network");
 	}
 
 	

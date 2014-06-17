@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import twelveengine.Engine;
+import twelveengine.Log;
 
 public class CommandLine extends Thread {
 	public Engine engine;
@@ -12,7 +13,7 @@ public class CommandLine extends Thread {
 	public CommandLine(Engine g) {
 		engine = g;
 		start();
-		System.out.println("Command Line ready!");
+		Log.log("Command Line Ready!", "Console");
 	}
 	
 	public void run() {

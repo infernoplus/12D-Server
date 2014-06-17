@@ -93,14 +93,14 @@ public class FileUtil {
 				nix = true;
 				String path = Engine.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 				String gameFolder = URLDecoder.decode(path, "UTF-8");
-				System.out.println("Server working directory: " + gameFolder);
+				Log.log("Server working directory: " + gameFolder, "Engine");
 				return gameFolder;
 			}
 			else {
 				nix = false;
 				String path = Engine.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 				String gameFolder = URLDecoder.decode(path, "UTF-8");
-				System.out.println("Server working directory: " + gameFolder);
+				Log.log("Server working directory: " + gameFolder, "Engine");
 				return gameFolder;
 			}
 		} catch (UnsupportedEncodingException e) {

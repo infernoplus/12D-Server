@@ -34,12 +34,14 @@ public class Engine {
 
 	/** Engine starts here! */
 	public void start() {
-		System.out.println("Loading engine...");
+		Settings.set("log2console", "true");
+		Settings.set("loglevel", "0");
+		Log.log("Loading engine...", "Engine");
 		gameFiles();
 		console = new Console(this); //Stars the console, and then runs all commands listed in config.cfg
 		network = new NetworkCore(this);
 		command = new CommandLine(this);
-		System.out.println("\nEngine ready!");
+		Log.log("Engine Ready!", "Engine");
 		console.initFile(); //Runs all commands listed in init.cfg
 	}
 	
